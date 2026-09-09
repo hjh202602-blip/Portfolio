@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>이름 — Developer Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 전체 페이지 배경 뉴럴 네트워크 캔버스 (스크롤해도 계속 따라다니며 보임) -->
+<canvas id="networkCanvas" class="bg-canvas"></canvas>
+
+<!-- 마우스를 따라다니는 은은한 글로우 커서 -->
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+<!-- 오른쪽 고정 점 네비게이션 (데스크톱) / 하단 바 (모바일) -->
+<nav class="dot-nav" id="dotNav" aria-label="섹션 이동">
+  <a href="#main" class="dot-nav__item" data-label="자기소개"><span class="dot-nav__dot"></span><span class="dot-nav__label">자기소개</span></a>
+  <a href="#explore" class="dot-nav__item" data-label="진로탐색"><span class="dot-nav__dot"></span><span class="dot-nav__label">진로탐색</span></a>
+  <a href="#skills" class="dot-nav__item" data-label="학습역량"><span class="dot-nav__dot"></span><span class="dot-nav__label">학습역량</span></a>
+  <a href="#projects" class="dot-nav__item" data-label="프로젝트"><span class="dot-nav__dot"></span><span class="dot-nav__label">프로젝트</span></a>
+</nav>
+
+<!-- ============================================================
+     1. MAIN — 자기소개
+     이름, 희망 진로/분야, 강점을 아래 placeholder 자리에 직접 채워주세요.
+     ============================================================ -->
+<section id="main" class="section hero">
+  <div class="hero__content">
+    <p class="hero__eyebrow">Developer Portfolio</p>
+    <h1 class="hero__name">이름</h1>
+    <p class="hero__role">희망 진로 · 분야</p>
+
+    <div class="hero__grid">
+      <div class="hero__block">
+        <h2 class="block-title">희망 진로 · 분야</h2>
+        <p class="block-text">내용1</p>
+      </div>
+
+      <div class="hero__block">
+        <h2 class="block-title">강점</h2>
+        <!-- 강점 개수는 자유롭게 <li>를 추가/삭제하세요 -->
+        <ul class="tag-list">
+          <li class="tag-list__item">강점1</li>
+          <li class="tag-list__item">강점2</li>
+          <li class="tag-list__item">강점3</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero__scroll-hint" aria-hidden="true">
+    <span>scroll</span>
+    <span class="hero__scroll-line"></span>
+  </div>
+</section>
+
+<!-- ============================================================
+     2. 진로탐색
+     ============================================================ -->
+<section id="explore" class="section">
+  <div class="section__inner">
+    <p class="section__index">01</p>
+    <h2 class="section__title">진로탐색</h2>
+
+    <div class="sub-block">
+      <h3 class="sub-title">선택 계기</h3>
+      <p class="block-text">내용1</p>
+    </div>
+
+    <div class="sub-block">
+      <h3 class="sub-title">관련 활동</h3>
+      <!-- 카드를 복사해서 활동을 추가하세요 -->
+      <div class="card-list">
+        <article class="card">
+          <h4 class="card__title">활동1</h4>
+          <p class="card__text">내용1</p>
+        </article>
+        <article class="card">
+          <h4 class="card__title">활동2</h4>
+          <p class="card__text">내용2</p>
+        </article>
+        <article class="card">
+          <h4 class="card__title">활동3</h4>
+          <p class="card__text">내용3</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="sub-block">
+      <h3 class="sub-title">관련 독서</h3>
+      <!-- 책 카드도 마찬가지로 복사해서 추가하세요 -->
+      <div class="card-list">
+        <article class="card">
+          <h4 class="card__title">도서명1</h4>
+          <p class="card__meta">저자1</p>
+          <p class="card__text">내용1</p>
+        </article>
+        <article class="card">
+          <h4 class="card__title">도서명2</h4>
+          <p class="card__meta">저자2</p>
+          <p class="card__text">내용2</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     3. 학습역량
+     ============================================================ -->
+<section id="skills" class="section">
+  <div class="section__inner">
+    <p class="section__index">02</p>
+    <h2 class="section__title">학습 역량</h2>
+
+    <div class="sub-block">
+      <h3 class="sub-title">AI 개념 정리</h3>
+      <p class="sub-desc">카드를 클릭하면 정리한 내용이 펼쳐집니다.</p>
+
+      <!-- 개념 카드는 자유롭게 복사해서 추가하세요 -->
+      <div class="concept-grid">
+        <button class="concept-card" type="button">
+          <span class="concept-card__title">개념1</span>
+          <span class="concept-card__text">내용1</span>
+        </button>
+        <button class="concept-card" type="button">
+          <span class="concept-card__title">개념2</span>
+          <span class="concept-card__text">내용2</span>
+        </button>
+        <button class="concept-card" type="button">
+          <span class="concept-card__title">개념3</span>
+          <span class="concept-card__text">내용3</span>
+        </button>
+        <button class="concept-card" type="button">
+          <span class="concept-card__title">개념4</span>
+          <span class="concept-card__text">내용4</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     4. 프로젝트
+     ============================================================ -->
+<section id="projects" class="section">
+  <div class="section__inner">
+    <p class="section__index">03</p>
+    <h2 class="section__title">프로젝트</h2>
+
+    <!-- 프로젝트 카드는 자유롭게 복사해서 추가하세요 (프젝1, 프젝2, ...) -->
+    <div class="project-list">
+
+      <article class="project">
+        <div class="project__info">
+          <h3 class="project__title">프젝1</h3>
+          <p class="project__text">내용1</p>
+          <ul class="tag-list tag-list--sm">
+            <li class="tag-list__item">스택1</li>
+            <li class="tag-list__item">스택2</li>
+          </ul>
+        </div>
+        <a class="project__link" href="#" target="_blank" rel="noopener">링크1 ↗</a>
+      </article>
+
+      <article class="project">
+        <div class="project__info">
+          <h3 class="project__title">프젝2</h3>
+          <p class="project__text">내용2</p>
+          <ul class="tag-list tag-list--sm">
+            <li class="tag-list__item">스택1</li>
+            <li class="tag-list__item">스택2</li>
+          </ul>
+        </div>
+        <a class="project__link" href="#" target="_blank" rel="noopener">링크2 ↗</a>
+      </article>
+
+      <article class="project">
+        <div class="project__info">
+          <h3 class="project__title">프젝3</h3>
+          <p class="project__text">내용3</p>
+          <ul class="tag-list tag-list--sm">
+            <li class="tag-list__item">스택1</li>
+            <li class="tag-list__item">스택2</li>
+          </ul>
+        </div>
+        <a class="project__link" href="#" target="_blank" rel="noopener">링크3 ↗</a>
+      </article>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>이름</p>
+    <p class="footer__contact">이메일1 · 깃허브1</p>
+  </footer>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
