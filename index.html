@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>이름 — Developer Portfolio</title>
+<title>홍정현 — Developer Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -11,45 +11,58 @@
 </head>
 <body>
 
-<!-- 전체 페이지 배경 뉴럴 네트워크 캔버스 (스크롤해도 계속 따라다니며 보임) -->
 <canvas id="networkCanvas" class="bg-canvas"></canvas>
-
-<!-- 마우스를 따라다니는 은은한 글로우 커서 -->
 <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
 
-<!-- 오른쪽 고정 점 네비게이션 (데스크톱) / 하단 바 (모바일) -->
 <nav class="dot-nav" id="dotNav" aria-label="섹션 이동">
-  <a href="#main" class="dot-nav__item" data-label="자기소개"><span class="dot-nav__dot"></span><span class="dot-nav__label">자기소개</span></a>
-  <a href="#explore" class="dot-nav__item" data-label="진로탐색"><span class="dot-nav__dot"></span><span class="dot-nav__label">진로탐색</span></a>
-  <a href="#skills" class="dot-nav__item" data-label="학습역량"><span class="dot-nav__dot"></span><span class="dot-nav__label">학습역량</span></a>
-  <a href="#projects" class="dot-nav__item" data-label="프로젝트"><span class="dot-nav__dot"></span><span class="dot-nav__label">프로젝트</span></a>
+  <a href="#main" class="dot-nav__item" data-label="자기소개">
+    <span class="dot-nav__dot"></span><span class="dot-nav__label">자기소개</span>
+  </a>
+  <a href="#explore" class="dot-nav__item" data-label="진로탐색">
+    <span class="dot-nav__dot"></span><span class="dot-nav__label">진로탐색</span>
+  </a>
+  <a href="#skills" class="dot-nav__item" data-label="학습역량">
+    <span class="dot-nav__dot"></span><span class="dot-nav__label">학습역량</span>
+  </a>
+  <a href="#projects" class="dot-nav__item" data-label="프로젝트">
+    <span class="dot-nav__dot"></span><span class="dot-nav__label">프로젝트</span>
+  </a>
 </nav>
 
-<!-- ============================================================
-     1. MAIN — 자기소개
-     이름, 희망 진로/분야, 강점을 아래 placeholder 자리에 직접 채워주세요.
-     ============================================================ -->
+
+<!-- MAIN -->
 <section id="main" class="section hero">
   <div class="hero__content">
     <p class="hero__eyebrow">Developer Portfolio</p>
-    <h1 class="hero__name">이름</h1>
-    <p class="hero__role">희망 진로 · 분야</p>
+    <h1 class="hero__name">홍정현</h1>
+    <p class="hero__role">Developer · AI</p>
 
     <div class="hero__grid">
-      <div class="hero__block">
-        <h2 class="block-title">희망 진로 · 분야</h2>
-        <p class="block-text">내용1</p>
-      </div>
 
       <div class="hero__block">
-        <h2 class="block-title">강점</h2>
-        <!-- 강점 개수는 자유롭게 <li>를 추가/삭제하세요 -->
-        <ul class="tag-list">
-          <li class="tag-list__item">강점1</li>
-          <li class="tag-list__item">강점2</li>
-          <li class="tag-list__item">강점3</li>
-        </ul>
+
+        <h2 class="block-title">희망 진로 · 분야</h2>
+        <p class="block-text">
+          AI의 개념들과 작동방식을 공부하고,
+          저만의 새로운 모델을 학습시키거나 
+          실제 프로젝트에서 적용하는 것을 
+          목표로 하고 있습니다.
+        </p>
       </div>
+
+      <div class="hero__block hero__block--perceptron">
+        <h2 class="block-title">강점</h2>
+
+        <ul class="perceptron-legend">
+          <li><span class="pd-weight-label">x₁</span> AI · 머신러닝</li>
+          <li><span class="pd-weight-label">x₂</span> 문제 해결</li>
+          <li><span class="pd-weight-label">x₃</span> 아이디어 구현</li>
+          <li><span class="pd-weight-label">x₄</span> 수학 · 컴퓨터 사고</li>
+        </ul>
+
+        <p class="perceptron-formula"><strong>y = f( Σ wᵢxᵢ + b )</strong> — 강점(x)에 가중치(w)를 곱해 더하고 활성화 함수(f)를 거치면, 하나의 출력값 — 제가 나아가고자 하는 방향 — 이 됩니다.</p>
+      </div>
+
     </div>
   </div>
 
@@ -59,137 +72,325 @@
   </div>
 </section>
 
-<!-- ============================================================
-     2. 진로탐색
-     ============================================================ -->
+
+<!-- CAREER -->
 <section id="explore" class="section">
   <div class="section__inner">
+
     <p class="section__index">01</p>
     <h2 class="section__title">진로탐색</h2>
 
     <div class="sub-block">
       <h3 class="sub-title">선택 계기</h3>
-      <p class="block-text">내용1</p>
+      <p class="block-text">
+        AI를 이용한 프로그램이 늘어나고 있는 지금,
+        직접 AI로 작동하는 프로젝트를 만들고 싶었습니다.
+        그래서 직접 AI를 공부하고, 단순히 AI를 사용하는 것을 넘어
+        AI가 어떻게 작동하는지 이해하며 실제 프로그램에 적용해 보고자 했습니다.
+      </p>
     </div>
+
 
     <div class="sub-block">
       <h3 class="sub-title">관련 활동</h3>
-      <!-- 카드를 복사해서 활동을 추가하세요 -->
+
       <div class="card-list">
+
         <article class="card">
-          <h4 class="card__title">활동1</h4>
-          <p class="card__text">내용1</p>
+          <h4 class="card__title">다층 퍼셉트론 구현</h4>
+          <p class="card__text">
+            AND, OR, NOT, XOR 등의 논리 게이트를 통해 퍼셉트론의 원리를 학습하고,
+            입력값과 가중치, 편향을 이용한 분류 과정을 직접 구현했습니다.
+            이후 학습 시간, 수면 시간, 문제 풀이 횟수를 입력으로 받아
+            시험 결과를 예측하는 MLP 아이디어로 확장했습니다.
+          </p>
         </article>
+
         <article class="card">
-          <h4 class="card__title">활동2</h4>
-          <p class="card__text">내용2</p>
+          <h4 class="card__title">AI · 머신러닝 학습</h4>
+          <p class="card__text">
+            PyTorch를 이용해 MNIST 손글씨 데이터를 학습하는 과정을 공부했습니다.
+            DataLoader, 신경망 구조, 손실 함수, 옵티마이저, 학습률,
+            torch.no_grad() 등의 개념을 코드와 함께 이해하고 있습니다.
+          </p>
         </article>
+
         <article class="card">
-          <h4 class="card__title">활동3</h4>
-          <p class="card__text">내용3</p>
+          <h4 class="card__title">AI 기반 손동작 인식</h4>
+          <p class="card__text">
+            Python, OpenCV, NumPy, MediaPipe를 활용해
+            손의 랜드마크와 손가락 각도를 분석하고
+            주먹, 손바닥, 가위, 바위 등의 손동작을 인식하는 프로젝트를 진행했습니다.
+          </p>
         </article>
+
+        <article class="card">
+          <h4 class="card__title">AI 동아리 활동</h4>
+          <p class="card__text">
+            머신러닝과 딥러닝에 관심을 가지고
+            생성형 AI, AI 활용 사례, 체스 AI, 이미지 생성 등의 주제를 탐구했습니다.
+            AI를 단순히 사용하는 것을 넘어 직접 프로젝트에 적용하는 것을 목표로 하고 있습니다.
+          </p>
+        </article>
+
       </div>
     </div>
+
 
     <div class="sub-block">
       <h3 class="sub-title">관련 독서</h3>
-      <!-- 책 카드도 마찬가지로 복사해서 추가하세요 -->
+
       <div class="card-list">
+
         <article class="card">
-          <h4 class="card__title">도서명1</h4>
-          <p class="card__meta">저자1</p>
-          <p class="card__text">내용1</p>
+          <h4 class="card__title">페르마의 마지막 정리</h4>
+          <p class="card__meta">수학 · 컴퓨터 사고</p>
+          <p class="card__text">
+            오랜 시간 수학적 난제와 증명 과정에서 생겨난
+            해결 아이디어와 생각들을 관심을 가지게 되었습니다.
+            이를 바탕으로 수학적 문제를 컴퓨터 공학과 AI의 관점에서
+            어떻게 접근할 수 있을지 생각해 보게 되었습니다.
+          </p>
         </article>
+
         <article class="card">
-          <h4 class="card__title">도서명2</h4>
-          <p class="card__meta">저자2</p>
-          <p class="card__text">내용2</p>
+          <h4 class="card__title">DUAL BRAIN</h4>
+          <p class="card__meta">AI · 인간의 사고</p>
+          <p class="card__text">
+            LLM마다 같은 질문에 대해 서로 다른 방식으로 답을 만들어내는 모습을 살펴보며,
+            LLM들이 정보를 처리하고 답을 구성하는 방식과 인간이 생각하는 방식의 차이에 관심을 가지게 되었습니다.
+            이를 통해 AI의 사고방식을 인간의 사고와 비교하고,
+            두 방식이 어떻게 서로 보완될 수 있을지 생각해 보았습니다.
+          </p>
         </article>
+
       </div>
     </div>
+
   </div>
 </section>
 
-<!-- ============================================================
-     3. 학습역량
-     ============================================================ -->
+
+<!-- SKILLS -->
 <section id="skills" class="section">
   <div class="section__inner">
+
     <p class="section__index">02</p>
     <h2 class="section__title">학습 역량</h2>
 
+    <a
+    class="section__link"
+    href="https://github.com/hjh202602-blip/AI-Study"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    보기 (클릭) ↗
+  </a>
     <div class="sub-block">
       <h3 class="sub-title">AI 개념 정리</h3>
       <p class="sub-desc">카드를 클릭하면 정리한 내용이 펼쳐집니다.</p>
 
-      <!-- 개념 카드는 자유롭게 복사해서 추가하세요 -->
       <div class="concept-grid">
+
         <button class="concept-card" type="button">
-          <span class="concept-card__title">개념1</span>
-          <span class="concept-card__text">내용1</span>
+          <svg class="concept-card__diagram" viewBox="0 0 220 76" role="img" aria-label="퍼셉트론 구조" xmlns="http://www.w3.org/2000/svg">
+            <line class="cc-edge" x1="20" y1="20" x2="110" y2="38"/>
+            <line class="cc-edge" x1="20" y1="56" x2="110" y2="38"/>
+            <line class="cc-edge" x1="110" y1="38" x2="150" y2="38"/>
+            <line class="cc-edge" x1="150" y1="38" x2="198" y2="38"/>
+            <circle class="cc-node" cx="20" cy="20" r="7"/>
+            <circle class="cc-node" cx="20" cy="56" r="7"/>
+            <circle class="cc-node" cx="110" cy="38" r="14"/>
+            <text class="cc-text cc-text--accent" x="110" y="42" text-anchor="middle">Σ</text>
+            <rect class="cc-node" x="137" y="25" width="26" height="26" rx="4"/>
+            <path class="cc-line" d="M141,44 C144,30 156,46 159,32"/>
+            <circle class="cc-node cc-node--out" cx="198" cy="38" r="10"/>
+            <text class="cc-text" x="20" y="8" text-anchor="middle">x₁</text>
+            <text class="cc-text" x="20" y="70" text-anchor="middle">x₂</text>
+            <text class="cc-text" x="198" y="58" text-anchor="middle">y</text>
+          </svg>
+          <span class="concept-card__title">Perceptron</span>
+          <span class="concept-card__text">
+            입력값에 가중치를 곱하고 편향을 더해
+            하나의 결과를 만들어내는 가장 기본적인 인공신경망 구조입니다.
+          </span>
         </button>
+
         <button class="concept-card" type="button">
-          <span class="concept-card__title">개념2</span>
-          <span class="concept-card__text">내용2</span>
+          <svg class="concept-card__diagram" viewBox="0 0 220 76" role="img" aria-label="다층 퍼셉트론 구조" xmlns="http://www.w3.org/2000/svg">
+            <line class="cc-edge" x1="20" y1="10" x2="110" y2="8"/>
+            <line class="cc-edge" x1="20" y1="10" x2="110" y2="28"/>
+            <line class="cc-edge" x1="20" y1="10" x2="110" y2="48"/>
+            <line class="cc-edge" x1="20" y1="10" x2="110" y2="68"/>
+            <line class="cc-edge" x1="20" y1="38" x2="110" y2="8"/>
+            <line class="cc-edge" x1="20" y1="38" x2="110" y2="28"/>
+            <line class="cc-edge" x1="20" y1="38" x2="110" y2="48"/>
+            <line class="cc-edge" x1="20" y1="38" x2="110" y2="68"/>
+            <line class="cc-edge" x1="20" y1="66" x2="110" y2="8"/>
+            <line class="cc-edge" x1="20" y1="66" x2="110" y2="28"/>
+            <line class="cc-edge" x1="20" y1="66" x2="110" y2="48"/>
+            <line class="cc-edge" x1="20" y1="66" x2="110" y2="68"/>
+            <line class="cc-edge--active" x1="110" y1="8" x2="198" y2="38"/>
+            <line class="cc-edge--active" x1="110" y1="28" x2="198" y2="38"/>
+            <line class="cc-edge--active" x1="110" y1="48" x2="198" y2="38"/>
+            <line class="cc-edge--active" x1="110" y1="68" x2="198" y2="38"/>
+            <circle class="cc-node" cx="20" cy="10" r="6"/>
+            <circle class="cc-node" cx="20" cy="38" r="6"/>
+            <circle class="cc-node" cx="20" cy="66" r="6"/>
+            <circle class="cc-node" cx="110" cy="8" r="6"/>
+            <circle class="cc-node" cx="110" cy="28" r="6"/>
+            <circle class="cc-node" cx="110" cy="48" r="6"/>
+            <circle class="cc-node" cx="110" cy="68" r="6"/>
+            <circle class="cc-node cc-node--out" cx="198" cy="38" r="9"/>
+          </svg>
+          <span class="concept-card__title">MLP</span>
+          <span class="concept-card__text">
+            여러 개의 층을 연결한 신경망입니다.
+            단층 퍼셉트론으로 해결하기 어려운 XOR과 같은 문제를
+            은닉층을 통해 해결할 수 있습니다.
+          </span>
         </button>
+
         <button class="concept-card" type="button">
-          <span class="concept-card__title">개념3</span>
-          <span class="concept-card__text">내용3</span>
+          <svg class="concept-card__diagram" viewBox="0 0 220 76" role="img" aria-label="손실 함수 감소 그래프" xmlns="http://www.w3.org/2000/svg">
+            <line class="cc-axis" x1="20" y1="8" x2="20" y2="64"/>
+            <line class="cc-axis" x1="20" y1="64" x2="205" y2="64"/>
+            <path class="cc-line" d="M28,16 C70,58 120,66 200,60"/>
+            <circle class="cc-dot" cx="200" cy="60" r="3"/>
+            <line class="cc-dim-line" x1="200" y1="60" x2="200" y2="64"/>
+            <text class="cc-text" x="14" y="14" text-anchor="end">loss</text>
+            <text class="cc-text" x="200" y="72" text-anchor="middle">epoch</text>
+          </svg>
+          <span class="concept-card__title">Loss Function</span>
+          <span class="concept-card__text">
+            모델의 예측값과 실제 정답이 얼마나 다른지를 나타내는 값입니다.
+            학습 과정에서는 손실을 줄이는 방향으로 모델의 파라미터를 조정합니다.
+          </span>
         </button>
+
         <button class="concept-card" type="button">
-          <span class="concept-card__title">개념4</span>
-          <span class="concept-card__text">내용4</span>
+          <svg class="concept-card__diagram" viewBox="0 0 220 76" role="img" aria-label="학습률에 따른 수렴 비교" xmlns="http://www.w3.org/2000/svg">
+            <path class="cc-axis" d="M15,20 Q110,66 205,20"/>
+            <path class="cc-dim-line" d="M40,26 L170,30 L55,38 L155,42 L70,48"/>
+            <path class="cc-line" d="M150,24 L90,34 L130,44 L100,52 L115,60 L110,64"/>
+            <circle class="cc-dot" cx="110" cy="64" r="3"/>
+            <text class="cc-text" x="40" y="16" text-anchor="middle">lr 큼</text>
+            <text class="cc-text cc-text--hl" x="150" y="16" text-anchor="middle">lr 적정</text>
+          </svg>
+          <span class="concept-card__title">Learning Rate</span>
+          <span class="concept-card__text">
+            학습 과정에서 가중치를 얼마나 크게 변경할지를 결정하는 값입니다.
+            너무 크면 학습이 불안정할 수 있고,
+            너무 작으면 학습 속도가 느려질 수 있습니다.
+          </span>
         </button>
+
       </div>
     </div>
+
   </div>
 </section>
 
-<!-- ============================================================
-     4. 프로젝트
-     ============================================================ -->
+
+<!-- PROJECTS -->
 <section id="projects" class="section">
   <div class="section__inner">
+
     <p class="section__index">03</p>
     <h2 class="section__title">프로젝트</h2>
 
-    <!-- 프로젝트 카드는 자유롭게 복사해서 추가하세요 (프젝1, 프젝2, ...) -->
     <div class="project-list">
 
       <article class="project">
         <div class="project__info">
-          <h3 class="project__title">프젝1</h3>
-          <p class="project__text">내용1</p>
+          <h3 class="project__title">BreakBias</h3>
+          <p class="project__text">
+            네이버지도에서 별점과 대표 리뷰만으로 장소를 판단하는 문제를 해결하기 위한
+            Chrome 확장 프로그램입니다.
+            리뷰를 방문 목적과 시간대 등의 맥락으로 분석하고,
+            장점뿐만 아니라 반대 관점과 놓친 정보까지 보여주는 것을 목표로 했습니다.
+          </p>
+
           <ul class="tag-list tag-list--sm">
-            <li class="tag-list__item">스택1</li>
-            <li class="tag-list__item">스택2</li>
+            <li class="tag-list__item">Python</li>
+            <li class="tag-list__item">FastAPI</li>
+            <li class="tag-list__item">AI</li>
+            <li class="tag-list__item">Chrome Extension</li>
           </ul>
         </div>
-        <a class="project__link" href="#" target="_blank" rel="noopener">링크1 ↗</a>
+
+        <a class="project__link" href="#" target="_blank" rel="noopener">
+          프로젝트 ↗
+        </a>
       </article>
+
 
       <article class="project">
         <div class="project__info">
-          <h3 class="project__title">프젝2</h3>
-          <p class="project__text">내용2</p>
+          <h3 class="project__title">손동작 인식 프로젝트</h3>
+          <p class="project__text">
+            카메라 영상에서 손의 위치와 관절 정보를 추출하고
+            손가락의 각도와 상태를 분석해 손동작을 인식하는 프로젝트입니다.
+            AI 기술을 실제 인터랙션에 연결하는 경험을 목표로 제작했습니다.
+          </p>
+
           <ul class="tag-list tag-list--sm">
-            <li class="tag-list__item">스택1</li>
-            <li class="tag-list__item">스택2</li>
+            <li class="tag-list__item">Python</li>
+            <li class="tag-list__item">OpenCV</li>
+            <li class="tag-list__item">MediaPipe</li>
+            <li class="tag-list__item">NumPy</li>
           </ul>
         </div>
-        <a class="project__link" href="#" target="_blank" rel="noopener">링크2 ↗</a>
+
+        <a class="project__link" href="#" target="_blank" rel="noopener">
+          프로젝트 ↗
+        </a>
       </article>
+
 
       <article class="project">
         <div class="project__info">
-          <h3 class="project__title">프젝3</h3>
-          <p class="project__text">내용3</p>
+          <h3 class="project__title">AI 학습 · MLP</h3>
+          <p class="project__text">
+            퍼셉트론과 다층 퍼셉트론의 원리를 학습하고,
+            논리 게이트부터 간단한 시험 결과 예측 모델까지 구현했습니다.
+            AI 모델이 입력 데이터를 어떻게 가중치와 편향을 통해
+            결과로 변환하는지 직접 확인했습니다.
+          </p>
+
           <ul class="tag-list tag-list--sm">
-            <li class="tag-list__item">스택1</li>
-            <li class="tag-list__item">스택2</li>
+            <li class="tag-list__item">Python</li>
+            <li class="tag-list__item">PyTorch</li>
+            <li class="tag-list__item">Machine Learning</li>
           </ul>
         </div>
-        <a class="project__link" href="#" target="_blank" rel="noopener">링크3 ↗</a>
+
+        <a class="project__link" href="#" target="_blank" rel="noopener">
+          프로젝트 ↗
+        </a>
+      </article>
+
+
+      <article class="project">
+        <div class="project__info">
+          <h3 class="project__title">Chess AI 탐구</h3>
+          <p class="project__text">
+            체스 AI와 게임 탐색 알고리즘에 관심을 가지고
+            Stockfish 등의 체스 엔진을 직접 실행해보며
+            AI가 수를 탐색하고 판단하는 방식에 대해 탐구했습니다.
+            이후에는 직접 AI를 만들어보는 것을 목표로 하고 있습니다.
+          </p>
+
+          <ul class="tag-list tag-list--sm">
+            <li class="tag-list__item">Python</li>
+            <li class="tag-list__item">AI</li>
+            <li class="tag-list__item">Chess</li>
+          </ul>
+        </div>
+
+        <a class="project__link" href="#" target="_blank" rel="noopener">
+          프로젝트 ↗
+        </a>
       </article>
 
     </div>
@@ -197,8 +398,30 @@
 
   <footer class="footer">
     <p>이름</p>
-    <p class="footer__contact">이메일1 · 깃허브1</p>
+    <p class="footer__contact">이메일 · GitHub</p>
   </footer>
+</section>
+
+<section id="records" class="section">
+  <div class="section__inner">
+    <p class="section__index">04</p>
+    <h2 class="section__title">진로 활동 기록</h2>
+
+    <div class="sub-block">
+      <div class="card">
+        <h4 class="card__title">진로 활동 기록.pdf</h4>
+        <p class="card__text">
+          강점 분석, 직업·학과 탐색, 대입전형 이해, 디지털 진로포트폴리오 기획 등
+          진로 수업에서 작성한 활동 기록입니다.
+        </p>
+        <a class="project__link pdf-link" href="career-record.pdf" target="_blank" rel="noopener">
+          PDF 열기 ↗
+        </a>
+      </div>
+
+      <embed src="career-record.pdf" type="application/pdf" class="pdf-embed" />
+    </div>
+  </div>
 </section>
 
 <script src="script.js"></script>
